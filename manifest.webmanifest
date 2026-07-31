@@ -1,0 +1,9 @@
+{
+  "name": "À plus! Trainer Pro",
+  "short_name": "Französisch",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#eef4f7",
+  "theme_color": "#173f5f",
+  "lang": "de-DE"
+}

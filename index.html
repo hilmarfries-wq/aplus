@@ -1,0 +1,13 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#173f5f"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css"><title>Französisch-Trainer</title></head><body>
+<header><div><small>À plus! Trainer Pro</small><h1>Französisch-Trainer</h1></div><button id="install" hidden>Installieren</button></header>
+<main>
+<section id="setup" class="card"><h2>Test zusammenstellen</h2><div class="grid">
+<label>Bereich<select id="section"></select></label>
+<label>Richtung<select id="direction"><option value="de-fr">Deutsch → Französisch</option><option value="fr-de">Französisch → Deutsch</option><option value="mixed">Gemischt</option></select></label>
+<label>Anzahl<select id="count"><option>10</option><option>15</option><option>20</option><option value="all">Alle</option></select></label>
+<label class="check"><input id="extra" type="checkbox"> Zusatzwortschatz einbeziehen</label></div>
+<div class="actions"><button id="start">Test starten</button><button id="historyBtn" class="alt">Ergebnisse</button></div><p id="status">Lade Daten …</p></section>
+<section id="quiz" class="card hidden"><div class="meta"><b id="progress"></b><b id="score"></b></div><div class="bar"><i id="bar"></i></div><p>Übersetze:</p><h2 id="question"></h2><input id="answer" autocomplete="off" spellcheck="false"><div class="actions"><button id="submit">Prüfen</button><button id="quit" class="alt">Abbrechen</button></div><div id="feedback" class="feedback hidden"></div></section>
+<section id="result" class="card hidden"><h2>Ergebnis</h2><div id="percent" class="percent"></div><p id="summary"></p><div id="mistakes"></div><button id="again">Neuer Test</button></section>
+<section id="history" class="card hidden"><h2>Letzte Ergebnisse</h2><div id="historyList"></div><div class="actions"><button id="back" class="alt">Zurück</button><button id="clear" class="danger">Löschen</button></div></section>
+</main><footer><span id="net">Online</span> · Phase 1</footer><script src="app.js"></script></body></html>

@@ -1,0 +1,1 @@
+const C='aplus-p1-v1',A=['./','index.html','style.css','app.js','manifest.webmanifest','daten/band4_unite1.json'];self.addEventListener('install',e=>e.waitUntil(caches.open(C).then(c=>c.addAll(A))));self.addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));
