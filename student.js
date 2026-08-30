@@ -1,10 +1,23 @@
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
 import { SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY } from './supabase-config.js';
 const sb=createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY),$=id=>document.getElementById(id);let test=null,i=0,answers={},deadline=null,timerId=null,submitting=false;
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
 function show(a,b){$(a).classList.add('hidden');$(b).classList.remove('hidden')}
 $('joinBtn').onclick=async()=>{$('joinStatus').textContent='Test wird geladen …';const {data,error}=await sb.rpc('start_public_test',{p_code:$('testCode').value.trim().toUpperCase(),p_student_name:$('studentName').value.trim(),p_class_name:$('studentClass').value.trim()});if(error){$('joinStatus').textContent=error.message;return}test=data;i=0;answers={};deadline=test.deadline?new Date(test.deadline).getTime():null;show('join','quiz');render();timerId=setInterval(tick,250)};
 function render(){const q=test.questions[i];$('prompt').textContent=q.prompt;$('progress').textContent=`Frage ${i+1} von ${test.questions.length}`;$('bar').style.width=`${i/test.questions.length*100}%`;$('answer').value=answers[q.id]||'';$('answer').focus();$('next').textContent=i+1===test.questions.length?'Abgeben':'Weiter'}
 $('next').onclick=()=>{answers[test.questions[i].id]=$('answer').value;i++;if(i>=test.questions.length)submit();else render()};
 $('answer').onkeydown=e=>{if(e.key==='Enter')$('next').click()};
 function tick(){if(!deadline){$('timer').textContent='Ohne Zeitlimit';return}let s=Math.max(0,Math.ceil((deadline-Date.now())/1000));$('timer').classList.toggle('warn',s<=300);$('timer').textContent=`${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;if(s<=0)submit()}
-async function submit(){if(submitting)return;submitting=true;clearInterval(timerId);if(i<test.questions.length&&test.questions[i])answers[test.questions[i].id]=$('answer').value;const {data,error}=await sb.rpc('submit_public_test',{p_attempt_token:test.attempt_token,p_answers:answers});if(error){alert(error.message);submitting=false;return}$('percent').textContent=data.percent+' %';$('grade').textContent='Note: '+data.grade;$('resultText').textContent=`${data.correct} von ${data.total} Antworten richtig. Bearbeitungszeit: ${Math.floor(data.duration_seconds/60)}:${String(data.duration_seconds%60).padStart(2,'0')} Min.`;show('quiz','result')}
+async function submit(){if(submitting)return;submitting=true;clearInterval(timerId);if(i<test.questions.length&&test.questions[i])answers[test.questions[i].id]=$('answer').value;const {data,error}=await sb.rpc('submit_public_test',{p_attempt_token:test.attempt_token,p_answers:answers});if(error){alert(error.message);submitting=false;return}$('percent').textContent=data.percent+' %';
+$('grade').textContent='Note: '+data.grade;
+$('resultText').textContent=`${data.correct} von ${data.total} Antworten richtig. Bearbeitungszeit: ${Math.floor(data.duration_seconds/60)}:${String(data.duration_seconds%60).padStart(2,'0')} Min.`;
+const mistakes=Array.isArray(data.mistakes)?data.mistakes:[];
+$('wrongAnswers').innerHTML=mistakes.length
+? `<h3>Das solltest du noch einmal anschauen</h3>`+mistakes.map((m,n)=>`
+  <div class="mistake">
+    <b>${n+1}. ${esc(m.prompt)}</b><br>
+    Deine Antwort: <strong>${esc(m.given || '—')}</strong><br>
+    Richtige Lösung: <strong>${esc(m.expected)}</strong>
+  </div>`).join('')
+: '<div class="feedback correct">Super – du hast alles richtig beantwortet.</div>';
+show('quiz','result')}
