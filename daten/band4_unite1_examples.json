@@ -10,7 +10,8 @@
       "target": "le projet",
       "answer": "projet",
       "sentence": "Construire un bateau, c’est le projet de mes rêves !",
-      "prompt": "Construire un bateau, c’est le ____ de mes rêves !"
+      "prompt": "Construire un bateau, c’est le ____ de mes rêves !",
+      "de_sentence": "Ein Boot zu bauen, das ist mein Traumprojekt!"
     },
     {
       "id": "ex002",
@@ -19,7 +20,8 @@
       "target": "le métier",
       "answer": "métier",
       "sentence": "C’est quoi, le métier de tes parents ?",
-      "prompt": "C’est quoi, le ____ de tes parents ?"
+      "prompt": "C’est quoi, le ____ de tes parents ?",
+      "de_sentence": "Was machen deine Eltern beruflich?"
     },
     {
       "id": "ex003",
@@ -28,7 +30,8 @@
       "target": "le domaine",
       "answer": "domaine",
       "sentence": "Lou travaille dans le domaine de l’art.",
-      "prompt": "Lou travaille dans le ____ de l’art."
+      "prompt": "Lou travaille dans le ____ de l’art.",
+      "de_sentence": "Lou arbeitet im Bereich Kunst."
     },
     {
       "id": "ex004",
@@ -37,7 +40,8 @@
       "target": "la technologie",
       "answer": "technologie",
       "sentence": "Aujourd’hui, nous dépendons beaucoup de la technologie.",
-      "prompt": "Aujourd’hui, nous dépendons beaucoup de la ____."
+      "prompt": "Aujourd’hui, nous dépendons beaucoup de la ____.",
+      "de_sentence": "Heute sind wir sehr von der Technologie abhängig."
     },
     {
       "id": "ex005",
@@ -46,7 +50,8 @@
       "target": "la santé",
       "answer": "santé",
       "sentence": "Faire du sport, c’est important pour la santé.",
-      "prompt": "Faire du sport, c’est important pour la ____."
+      "prompt": "Faire du sport, c’est important pour la ____.",
+      "de_sentence": "Sport zu treiben ist wichtig für die Gesundheit."
     },
     {
       "id": "ex006",
@@ -55,7 +60,8 @@
       "target": "l’alimentation",
       "answer": "alimentation",
       "sentence": "Si tu manges de la viande, ton alimentation n’est pas végétarienne.",
-      "prompt": "Si tu manges de la viande, ton ____ n’est pas végétarienne."
+      "prompt": "Si tu manges de la viande, ton ____ n’est pas végétarienne.",
+      "de_sentence": "Wenn du Fleisch isst, ist deine Ernährung nicht vegetarisch."
     },
     {
       "id": "ex007",
@@ -64,7 +70,8 @@
       "target": "réfléchir (à qc)",
       "answer": "réfléchis",
       "sentence": "Je réfléchis souvent à mon avenir.",
-      "prompt": "Je ____ souvent à mon avenir."
+      "prompt": "Je ____ souvent à mon avenir.",
+      "de_sentence": "Ich denke oft über meine Zukunft nach."
     },
     {
       "id": "ex008",
@@ -73,7 +80,8 @@
       "target": "professionnel/professionnelle",
       "answer": "professionnel",
       "sentence": "Quel est ton projet professionnel ?",
-      "prompt": "Quel est ton projet ____ ?"
+      "prompt": "Quel est ton projet ____ ?",
+      "de_sentence": "Was ist dein berufliches Projekt?"
     },
     {
       "id": "ex009",
@@ -82,7 +90,8 @@
       "target": "autonome",
       "answer": "autonome",
       "sentence": "À la maison comme à l’école, Pierre est autonome.",
-      "prompt": "À la maison comme à l’école, Pierre est ____."
+      "prompt": "À la maison comme à l’école, Pierre est ____.",
+      "de_sentence": "Zu Hause wie in der Schule ist Pierre selbstständig."
     },
     {
       "id": "ex010",
@@ -91,7 +100,8 @@
       "target": "être assis/assise",
       "answer": "assis",
       "sentence": "Nous sommes assis depuis deux heures sur ces chaises !",
-      "prompt": "Nous sommes ____ depuis deux heures sur ces chaises !"
+      "prompt": "Nous sommes ____ depuis deux heures sur ces chaises !",
+      "de_sentence": "Wir sitzen seit zwei Stunden auf diesen Stühlen!"
     },
     {
       "id": "ex011",
@@ -100,7 +110,8 @@
       "target": "la main",
       "answer": "main",
       "sentence": "Donne la main à ton frère.",
-      "prompt": "Donne la ____ à ton frère."
+      "prompt": "Donne la ____ à ton frère.",
+      "de_sentence": "Gib deinem Bruder die Hand."
     },
     {
       "id": "ex012",
@@ -109,7 +120,8 @@
       "target": "la formation",
       "answer": "formation",
       "sentence": "Dans quel domaine tu voudrais faire une formation ?",
-      "prompt": "Dans quel domaine tu voudrais faire une ____ ?"
+      "prompt": "Dans quel domaine tu voudrais faire une ____ ?",
+      "de_sentence": "In welchem Bereich würdest du gerne eine Ausbildung machen?"
     },
     {
       "id": "ex013",
@@ -118,7 +130,8 @@
       "target": "une entreprise",
       "answer": "entreprise",
       "sentence": "Cette entreprise fait des vélos.",
-      "prompt": "Cette ____ fait des vélos."
+      "prompt": "Cette ____ fait des vélos.",
+      "de_sentence": "Dieses Unternehmen stellt Fahrräder her."
     },
     {
       "id": "ex014",
@@ -127,7 +140,8 @@
       "target": "utile",
       "answer": "utile",
       "sentence": "Je veux être utile pour la société.",
-      "prompt": "Je veux être ____ pour la société."
+      "prompt": "Je veux être ____ pour la société.",
+      "de_sentence": "Ich möchte für die Gesellschaft nützlich sein."
     },
     {
       "id": "ex015",
@@ -136,7 +150,8 @@
       "target": "s’occuper de qn/qc",
       "answer": "occupe",
       "sentence": "Ne t’occupe pas de lui !",
-      "prompt": "Ne t’____ pas de lui !"
+      "prompt": "Ne t’____ pas de lui !",
+      "de_sentence": "Kümmere dich nicht um ihn!"
     },
     {
       "id": "ex016",
@@ -145,7 +160,8 @@
       "target": "la responsabilité",
       "answer": "responsabilité",
       "sentence": "Il n’y a pas de métier sans responsabilité.",
-      "prompt": "Il n’y a pas de métier sans ____."
+      "prompt": "Il n’y a pas de métier sans ____.",
+      "de_sentence": "Es gibt keinen Beruf ohne Verantwortung."
     },
     {
       "id": "ex017",
@@ -154,7 +170,8 @@
       "target": "s’adapter (à qc)",
       "answer": "adapte",
       "sentence": "Julie s’adapte à toutes les situations.",
-      "prompt": "Julie s’____ à toutes les situations."
+      "prompt": "Julie s’____ à toutes les situations.",
+      "de_sentence": "Julie passt sich an alle Situationen an."
     },
     {
       "id": "ex018",
@@ -163,7 +180,8 @@
       "target": "la situation",
       "answer": "situation",
       "sentence": "C’est une situation difficile.",
-      "prompt": "C’est une ____ difficile."
+      "prompt": "C’est une ____ difficile.",
+      "de_sentence": "Das ist eine schwierige Situation."
     },
     {
       "id": "ex019",
@@ -172,7 +190,8 @@
       "target": "être doué/douée",
       "answer": "doué",
       "sentence": "Léo est bon partout. Il est très doué.",
-      "prompt": "Léo est bon partout. Il est très ____."
+      "prompt": "Léo est bon partout. Il est très ____.",
+      "de_sentence": "Léo ist überall gut. Er ist sehr begabt."
     },
     {
       "id": "ex020",
@@ -181,7 +200,8 @@
       "target": "le conseiller/la conseillère d’orientation",
       "answer": "conseiller",
       "sentence": "Si tu ne sais pas quel métier choisir, va chez le conseiller d’orientation.",
-      "prompt": "Si tu ne sais pas quel métier choisir, va chez le ____ d’orientation."
+      "prompt": "Si tu ne sais pas quel métier choisir, va chez le ____ d’orientation.",
+      "de_sentence": "Wenn du nicht weißt, welchen Beruf du wählen sollst, geh zum Berufsberater."
     },
     {
       "id": "ex021",
@@ -190,7 +210,8 @@
       "target": "n’avoir aucune idée (de qc)",
       "answer": "aucune idée",
       "sentence": "— Où est M. Duval ? — Je n’ai aucune idée.",
-      "prompt": "— Où est M. Duval ? — Je n’ai ____."
+      "prompt": "— Où est M. Duval ? — Je n’ai ____.",
+      "de_sentence": "– Wo ist Herr Duval? – Ich habe keine Ahnung."
     },
     {
       "id": "ex022",
@@ -199,7 +220,8 @@
       "target": "plaire (à qn)",
       "answer": "plaisent",
       "sentence": "Ces lunettes me plaisent beaucoup.",
-      "prompt": "Ces lunettes me ____ beaucoup."
+      "prompt": "Ces lunettes me ____ beaucoup.",
+      "de_sentence": "Diese Brille gefällt mir sehr gut."
     },
     {
       "id": "ex023",
@@ -208,7 +230,8 @@
       "target": "le petit boulot",
       "answer": "petit boulot",
       "sentence": "Ma sœur a un petit boulot : elle travaille dans un magasin le samedi.",
-      "prompt": "Ma sœur a un ____ : elle travaille dans un magasin le samedi."
+      "prompt": "Ma sœur a un ____ : elle travaille dans un magasin le samedi.",
+      "de_sentence": "Meine Schwester hat einen kleinen Job: Sie arbeitet samstags in einem Geschäft."
     },
     {
       "id": "ex024",
@@ -217,7 +240,8 @@
       "target": "garder qn/qc",
       "answer": "garde",
       "sentence": "Ma grand-mère garde mon frère après l’école.",
-      "prompt": "Ma grand-mère ____ mon frère après l’école."
+      "prompt": "Ma grand-mère ____ mon frère après l’école.",
+      "de_sentence": "Meine Großmutter passt nach der Schule auf meinen Bruder auf."
     },
     {
       "id": "ex025",
@@ -226,7 +250,8 @@
       "target": "le stage",
       "answer": "stage",
       "sentence": "Enzo veut faire un stage à la télé.",
-      "prompt": "Enzo veut faire un ____ à la télé."
+      "prompt": "Enzo veut faire un ____ à la télé.",
+      "de_sentence": "Enzo möchte ein Praktikum beim Fernsehen machen."
     },
     {
       "id": "ex026",
@@ -235,7 +260,8 @@
       "target": "on dirait (que)",
       "answer": "dirait",
       "sentence": "On dirait que le prof n’est pas là !",
-      "prompt": "On ____ que le prof n’est pas là !"
+      "prompt": "On ____ que le prof n’est pas là !",
+      "de_sentence": "Es sieht so aus, als wäre der Lehrer nicht da!"
     },
     {
       "id": "ex027",
@@ -244,7 +270,8 @@
       "target": "supporter qn/qc",
       "answer": "supporte",
       "sentence": "Je ne supporte pas le gaspillage.",
-      "prompt": "Je ne ____ pas le gaspillage."
+      "prompt": "Je ne ____ pas le gaspillage.",
+      "de_sentence": "Ich kann Verschwendung nicht ausstehen."
     },
     {
       "id": "ex028",
@@ -253,7 +280,8 @@
       "target": "un homme",
       "answer": "homme",
       "sentence": "Pour vivre, l’homme a besoin de la nature.",
-      "prompt": "Pour vivre, l’____ a besoin de la nature."
+      "prompt": "Pour vivre, l’____ a besoin de la nature.",
+      "de_sentence": "Um zu leben, braucht der Mensch die Natur."
     },
     {
       "id": "ex029",
@@ -262,7 +290,8 @@
       "target": "handicapé/handicapée",
       "answer": "handicapées",
       "sentence": "Il y a un ascenseur pour les personnes handicapées.",
-      "prompt": "Il y a un ascenseur pour les personnes ____."
+      "prompt": "Il y a un ascenseur pour les personnes ____.",
+      "de_sentence": "Es gibt einen Aufzug für Menschen mit Behinderung."
     },
     {
       "id": "ex030",
@@ -271,7 +300,8 @@
       "target": "faire du bien (à qn/qc)",
       "answer": "faire du bien",
       "sentence": "Les vacances vont te faire du bien.",
-      "prompt": "Les vacances vont te ____."
+      "prompt": "Les vacances vont te ____.",
+      "de_sentence": "Die Ferien werden dir guttun."
     },
     {
       "id": "ex031",
@@ -280,7 +310,8 @@
       "target": "un avantage",
       "answer": "avantage",
       "sentence": "L’avantage du vélo : c’est plus écolo que la voiture.",
-      "prompt": "L’____ du vélo : c’est plus écolo que la voiture."
+      "prompt": "L’____ du vélo : c’est plus écolo que la voiture.",
+      "de_sentence": "Der Vorteil des Fahrrads: Es ist umweltfreundlicher als das Auto."
     },
     {
       "id": "ex032",
@@ -289,7 +320,8 @@
       "target": "un inconvénient",
       "answer": "inconvénient",
       "sentence": "L’inconvénient du vélo : c’est moins rapide que la voiture.",
-      "prompt": "L’____ du vélo : c’est moins rapide que la voiture."
+      "prompt": "L’____ du vélo : c’est moins rapide que la voiture.",
+      "de_sentence": "Der Nachteil des Fahrrads: Es ist langsamer als das Auto."
     },
     {
       "id": "ex033",
@@ -298,7 +330,8 @@
       "target": "être prêt/prête (à + inf.)",
       "answer": "prête",
       "sentence": "Est-ce que tu es prête à partir ?",
-      "prompt": "Est-ce que tu es ____ à partir ?"
+      "prompt": "Est-ce que tu es ____ à partir ?",
+      "de_sentence": "Bist du bereit loszufahren?"
     },
     {
       "id": "ex034",
@@ -307,7 +340,8 @@
       "target": "un éducateur/une éducatrice",
       "answer": "éducateur",
       "sentence": "Il faut aimer travailler avec les enfants pour être éducateur.",
-      "prompt": "Il faut aimer travailler avec les enfants pour être ____."
+      "prompt": "Il faut aimer travailler avec les enfants pour être ____.",
+      "de_sentence": "Man muss gerne mit Kindern arbeiten, um Erzieher zu sein."
     },
     {
       "id": "ex035",
@@ -316,7 +350,8 @@
       "target": "un infirmier/une infirmière",
       "answer": "infirmier",
       "sentence": "Mon frère est infirmier et travaille souvent la nuit.",
-      "prompt": "Mon frère est ____ et travaille souvent la nuit."
+      "prompt": "Mon frère est ____ et travaille souvent la nuit.",
+      "de_sentence": "Mein Bruder ist Krankenpfleger und arbeitet oft nachts."
     },
     {
       "id": "ex036",
@@ -325,7 +360,8 @@
       "target": "se renseigner sur qn/qc",
       "answer": "renseigné",
       "sentence": "Il s’est déjà renseigné.",
-      "prompt": "Il s’est déjà ____."
+      "prompt": "Il s’est déjà ____.",
+      "de_sentence": "Er hat sich schon informiert."
     },
     {
       "id": "ex037",
@@ -334,7 +370,8 @@
       "target": "aller (à qn / avec qc)",
       "answer": "vont",
       "sentence": "J’adore ces sneakers, ils me vont bien.",
-      "prompt": "J’adore ces sneakers, ils me ____ bien."
+      "prompt": "J’adore ces sneakers, ils me ____ bien.",
+      "de_sentence": "Ich liebe diese Sneakers, sie stehen mir gut."
     },
     {
       "id": "ex038",
@@ -343,7 +380,8 @@
       "target": "envoyer qc à qn",
       "answer": "envoyé",
       "sentence": "Je lui ai envoyé une carte postale.",
-      "prompt": "Je lui ai ____ une carte postale."
+      "prompt": "Je lui ai ____ une carte postale.",
+      "de_sentence": "Ich habe ihm eine Postkarte geschickt."
     },
     {
       "id": "ex039",
@@ -352,7 +390,8 @@
       "target": "le rendez-vous",
       "answer": "rendez-vous",
       "sentence": "Tu as rendez-vous à quelle heure ?",
-      "prompt": "Tu as ____ à quelle heure ?"
+      "prompt": "Tu as ____ à quelle heure ?",
+      "de_sentence": "Um wie viel Uhr hast du einen Termin?"
     },
     {
       "id": "ex040",
@@ -361,7 +400,8 @@
       "target": "forcément",
       "answer": "forcément",
       "sentence": "Elle a parlé fort. Alors forcément, il a tout entendu !",
-      "prompt": "Elle a parlé fort. Alors ____, il a tout entendu !"
+      "prompt": "Elle a parlé fort. Alors ____, il a tout entendu !",
+      "de_sentence": "Sie hat laut gesprochen. Also hat er natürlich alles gehört!"
     },
     {
       "id": "ex041",
@@ -370,7 +410,8 @@
       "target": "depuis que",
       "answer": "depuis que",
       "sentence": "Je joue du piano depuis que j’ai dix ans. Et toi ?",
-      "prompt": "Je joue du piano ____ j’ai dix ans. Et toi ?"
+      "prompt": "Je joue du piano ____ j’ai dix ans. Et toi ?",
+      "de_sentence": "Ich spiele Klavier, seit ich zehn Jahre alt bin. Und du?"
     },
     {
       "id": "ex042",
@@ -379,7 +420,8 @@
       "target": "nettoyer qc",
       "answer": "nettoyé",
       "sentence": "J’ai nettoyé toute la cuisine.",
-      "prompt": "J’ai ____ toute la cuisine."
+      "prompt": "J’ai ____ toute la cuisine.",
+      "de_sentence": "Ich habe die ganze Küche geputzt."
     },
     {
       "id": "ex043",
@@ -388,7 +430,8 @@
       "target": "faire peur (à qn)",
       "answer": "fais peur",
       "sentence": "Arrête, tu me fais peur !",
-      "prompt": "Arrête, tu me ____ !"
+      "prompt": "Arrête, tu me ____ !",
+      "de_sentence": "Hör auf, du machst mir Angst!"
     },
     {
       "id": "ex044",
@@ -397,7 +440,8 @@
       "target": "poser sa candidature (pour qc)",
       "answer": "candidature",
       "sentence": "Céline a posé sa candidature pour travailler comme ingénieure.",
-      "prompt": "Céline a posé sa ____ pour travailler comme ingénieure."
+      "prompt": "Céline a posé sa ____ pour travailler comme ingénieure.",
+      "de_sentence": "Céline hat sich beworben, um als Ingenieurin zu arbeiten."
     },
     {
       "id": "ex045",
@@ -406,7 +450,8 @@
       "target": "physiquement",
       "answer": "physiquement",
       "sentence": "Léon est motivé, mais physiquement, il est très fatigué.",
-      "prompt": "Léon est motivé, mais ____, il est très fatigué."
+      "prompt": "Léon est motivé, mais ____, il est très fatigué.",
+      "de_sentence": "Léon ist motiviert, aber körperlich ist er sehr müde."
     },
     {
       "id": "ex046",
@@ -415,7 +460,8 @@
       "target": "le robot",
       "answer": "robot",
       "sentence": "En techno, on a programmé un robot.",
-      "prompt": "En techno, on a programmé un ____."
+      "prompt": "En techno, on a programmé un ____.",
+      "de_sentence": "Im Technikunterricht haben wir einen Roboter programmiert."
     },
     {
       "id": "ex047",
@@ -424,7 +470,8 @@
       "target": "de plus en plus",
       "answer": "de plus en plus",
       "sentence": "Il y a de plus en plus de touristes ici.",
-      "prompt": "Il y a ____ de touristes ici."
+      "prompt": "Il y a ____ de touristes ici.",
+      "de_sentence": "Hier gibt es immer mehr Touristen."
     },
     {
       "id": "ex048",
@@ -433,7 +480,8 @@
       "target": "programmer qc",
       "answer": "programme",
       "sentence": "Ma mère a un travail trop cool : elle programme des jeux vidéo.",
-      "prompt": "Ma mère a un travail trop cool : elle ____ des jeux vidéo."
+      "prompt": "Ma mère a un travail trop cool : elle ____ des jeux vidéo.",
+      "de_sentence": "Meine Mutter hat einen richtig coolen Job: Sie programmiert Videospiele."
     },
     {
       "id": "ex049",
@@ -442,7 +490,8 @@
       "target": "l’informatique",
       "answer": "informatique",
       "sentence": "Jean est doué en informatique.",
-      "prompt": "Jean est doué en ____."
+      "prompt": "Jean est doué en ____.",
+      "de_sentence": "Jean ist gut in Informatik."
     },
     {
       "id": "ex050",
@@ -451,7 +500,8 @@
       "target": "se spécialiser (dans qc)",
       "answer": "spécialisée",
       "sentence": "Je me suis spécialisée dans l’Histoire du Moyen-Âge.",
-      "prompt": "Je me suis ____ dans l’Histoire du Moyen-Âge."
+      "prompt": "Je me suis ____ dans l’Histoire du Moyen-Âge.",
+      "de_sentence": "Ich habe mich auf die Geschichte des Mittelalters spezialisiert."
     },
     {
       "id": "ex051",
@@ -460,7 +510,8 @@
       "target": "rater qc",
       "answer": "raté",
       "sentence": "Il a raté le concours.",
-      "prompt": "Il a ____ le concours."
+      "prompt": "Il a ____ le concours.",
+      "de_sentence": "Er hat die Aufnahmeprüfung nicht bestanden."
     },
     {
       "id": "ex052",
@@ -469,7 +520,8 @@
       "target": "motivé/motivée",
       "answer": "motivée",
       "sentence": "Sophie est motivée pour ce stage.",
-      "prompt": "Sophie est ____ pour ce stage."
+      "prompt": "Sophie est ____ pour ce stage.",
+      "de_sentence": "Sophie ist für dieses Praktikum motiviert."
     },
     {
       "id": "ex053",
@@ -478,7 +530,8 @@
       "target": "permettre (à qn) de + inf.",
       "answer": "permis",
       "sentence": "Ses bonnes notes lui ont permis de faire une formation.",
-      "prompt": "Ses bonnes notes lui ont ____ de faire une formation."
+      "prompt": "Ses bonnes notes lui ont ____ de faire une formation.",
+      "de_sentence": "Seine guten Noten haben es ihm ermöglicht, eine Ausbildung zu machen."
     },
     {
       "id": "ex054",
@@ -487,7 +540,10 @@
       "target": "la lune",
       "answer": "lune",
       "sentence": "La lune est à 400 000 km de notre planète !",
-      "prompt": "La ____ est à 400 000 km de notre planète !"
+      "prompt": "La ____ est à 400 000 km de notre planète !",
+      "de_sentence": "Der Mond ist 400.000 km von unserem Planeten entfernt!"
     }
-  ]
+  ],
+  "mode": "full_sentence",
+  "description": "Deutsche Vorgabe → vollständiger französischer Beispielsatz."
 }
