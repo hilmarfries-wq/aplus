@@ -9,7 +9,27 @@ function toggle(on){$('loginBox').classList.toggle('hidden',on);$('teacherBox').
 $('login').onclick=async()=>{const {error}=await sb.auth.signInWithPassword({email:$('email').value,password:$('password').value});$('loginStatus').textContent=error?error.message:'Angemeldet';if(!error){toggle(true);refresh()}};
 $('logout').onclick=async()=>{await sb.auth.signOut();toggle(false)};
 $('createTest').onclick=async()=>{const {data:{user}}=await sb.auth.getUser();if(!user)return;const code=$('code').value.trim().toUpperCase();if(!/^[A-Z0-9-]{4,24}$/.test(code))return $('createStatus').textContent='Testcode: 4–24 Zeichen, nur A–Z, 0–9 und Bindestrich.';const sec=$('section').value,extra=$('extra').checked,dir=$('direction').value,type=$('taskType').value;const vp=vocab.filter(e=>(sec==='all'||e.section===sec)&&(extra||e.learning_vocabulary)).map(e=>{const d=dir==='mixed'?(Math.random()<.5?'de-fr':'fr-de'):dir;return{prompt:d==='de-fr'?e.de:e.fr,answer:d==='de-fr'?e.fr:e.de,kind:'vocab'}}),ep=examples.filter(e=>sec==='all'||e.section===sec).map(e=>({prompt:e.prompt+'\n('+e.target+')',answer:e.answer,kind:'cloze'}));let pool=type==='vocab'?vp:type==='cloze'?ep:shuffle([...vp,...ep]);const cv=$('count').value,n=cv==='all'?pool.length:Math.min(+cv,pool.length);if(!n)return alert('Keine Aufgaben gewählt.');const qs=shuffle(pool).slice(0,n).map((q,i)=>({id:`q${i+1}`,...q})),row={teacher_id:user.id,code,title:$('title').value.trim(),class_name:$('className').value.trim(),section:$('section').selectedOptions[0].textContent,direction:type==='cloze'?'cloze':dir,question_count:qs.length,include_extra:extra,time_limit_minutes:+$('timeLimit').value||null,grading_scale:grades(),questions:qs};const {error}=await sb.from('tests').insert(row);$('createStatus').textContent=error?error.message:`Test ${row.code} wurde erstellt.`;if(!error)refresh()};
-async function refresh(){const {data:tests,error:e1}=await sb.from('tests').select('*').order('created_at',{ascending:false});const {data:results,error:e2}=await sb.from('results').select('*').order('submitted_at',{ascending:false});if(e1||e2){$('dashboard').textContent=(e1||e2).message;return}cache=results||[];$('dashboard').innerHTML=(tests||[]).map(t=>{const rs=cache.filter(r=>r.test_id===t.id);const avg=rs.length?Math.round(rs.reduce((s,r)=>s+r.percent,0)/rs.length):null;return`<div class="test-block"><b>${esc(t.title)}</b> · Code <b>${esc(t.code)}</b> · ${t.time_limit_minutes||'kein'} Min. · ${t.active?'aktiv':'geschlossen'}<br><small>${rs.length} Abgaben${avg!==null?' · Ø '+avg+' %':''}</small>${rs.map(r=>`<div class="history-item">${esc(r.student_name)} (${esc(r.class_name||'')}) — ${r.correct_count}/${r.total_count}, ${r.percent} %, Note ${esc(r.grade)}, ${Math.floor(r.duration_seconds/60)}:${String(r.duration_seconds%60).padStart(2,'0')} Min.</div>`).join('')}</div>`}).join('')||'<p>Noch keine Tests.</p>'}
+async function refresh(){const {data:tests,error:e1}=await sb.from('tests').select('*').order('created_at',{ascending:false});const {data:results,error:e2}=await sb.from('results').select('*').order('submitted_at',{ascending:false});if(e1||e2){$('dashboard').textContent=(e1||e2).message;return}cache=results||[];$('dashboard').innerHTML=(tests||[]).map(t=>{const rs=cache.filter(r=>r.test_id===t.id);const avg=rs.length?Math.round(rs.reduce((s,r)=>s+r.percent,0)/rs.length):null;return`<div class="test-block"><div class="test-head"><div><b>${esc(t.title)}</b> · Code <b>${esc(t.code)}</b> · ${t.time_limit_minutes||'kein'} Min. · ${t.active?'aktiv':'geschlossen'}<br><small>${rs.length} Abgaben${avg!==null?' · Ø '+avg+' %':''}</small></div><button class="danger small-btn delete-test" data-test-id="${t.id}">Test löschen</button></div>${rs.map(r=>`<div class="history-item result-row"><span>${esc(r.student_name)} (${esc(r.class_name||'')}) — ${r.correct_count}/${r.total_count}, ${r.percent} %, Note ${esc(r.grade)}, ${Math.floor(r.duration_seconds/60)}:${String(r.duration_seconds%60).padStart(2,'0')} Min.</span><button class="danger small-btn delete-result" data-result-id="${r.id}">Löschen</button></div>`).join('')}</div>`}).join('')||'<p>Noch keine Tests.</p>'}
+
+$('dashboard').addEventListener('click',async e=>{
+  const resultBtn=e.target.closest('.delete-result');
+  if(resultBtn){
+    if(!confirm('Dieses einzelne Ergebnis wirklich löschen?'))return;
+    resultBtn.disabled=true;
+    const {error}=await sb.rpc('delete_teacher_result',{p_result_id:resultBtn.dataset.resultId});
+    if(error){alert('Löschen nicht möglich: '+error.message);resultBtn.disabled=false;return}
+    await refresh();
+    return;
+  }
+  const testBtn=e.target.closest('.delete-test');
+  if(testBtn){
+    if(!confirm('Diesen Test wirklich löschen? Alle Ergebnisse und Versuche dieses Tests werden ebenfalls gelöscht.'))return;
+    testBtn.disabled=true;
+    const {error}=await sb.rpc('delete_teacher_test',{p_test_id:testBtn.dataset.testId});
+    if(error){alert('Löschen nicht möglich: '+error.message);testBtn.disabled=false;return}
+    await refresh();
+  }
+});
 $('refresh').onclick=refresh;
 $('csv').onclick=()=>{let c='Name;Klasse;Punkte;Gesamt;Prozent;Note;Dauer Sekunden;Abgabe\n'+cache.map(r=>[r.student_name,r.class_name,r.correct_count,r.total_count,r.percent,r.grade,r.duration_seconds,r.submitted_at].map(x=>`"${String(x??'').replaceAll('"','""')}"`).join(';')).join('\n');let a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['\ufeff'+c],{type:'text/csv;charset=utf-8'}));a.download='Franzoesisch_Ergebnisse.csv';a.click()};
 init();
