@@ -51,6 +51,6 @@ begin
  if total=0 then raise exception 'Test enthält keine Fragen'; end if; pct:=round(correct::numeric/total*100); final_grade:=public.grade_for(t.grading_scale,pct);
  insert into public.results(test_id,teacher_id,student_name,class_name,correct_count,total_count,percent,grade,duration_seconds,answers,mistakes) values(t.id,t.teacher_id,a.student_name,a.class_name,correct,total,pct,final_grade,duration,p_answers,mistake_list) returning * into rr;
  update public.attempts set submitted_at=now(),result_id=rr.id where id=a.id;
- return jsonb_build_object('correct',correct,'total',total,'percent',pct,'grade',final_grade,'duration_seconds',duration);
+ return jsonb_build_object('correct',correct,'total',total,'percent',pct,'grade',final_grade,'duration_seconds',duration,'mistakes',mistake_list);
 end; $$;
 grant execute on function public.start_public_test(text,text,text) to anon,authenticated; grant execute on function public.submit_public_test(uuid,jsonb) to anon,authenticated;
